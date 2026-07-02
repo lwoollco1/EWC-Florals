@@ -20,7 +20,7 @@ const images = [
   { url: "https://images.unsplash.com/photo-1766311890594-3cece21ac4b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmFieSUyMHNob3dlciUyMGZsb3dlcnN8ZW58MHx8MHx8fDA%3D", alt: "Delicate pink and white floral display for baby shower", category: "Baby Showers" },
   // Events
   { url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800", alt: "Intimate candlelit dinner party with floral centerpieces", category: "Events" },
-  { url: "https://media.istockphoto.com/id/1939425194/photo/serving-setting-table-festive-dinner-table-is-served-dishes-and-cutlery-and-decorated-with.jpg?s=2048x2048&w=is&k=20&c=lt7Ls4ZZoaWQ-4UDbXoAIpl9Y6OkRbxtNK_EK5L9Mmo=", alt: "Birthday party floral installation and decor", category: "Events" },
+  { url: "https://images.unsplash.com/photo-1632528011905-54e2464961f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGlubmVyJTIwZXZlbnQlMjBmbG93ZXJzfGVufDB8fDB8fHww", alt: "Birthday party floral installation and decor", category: "Events" },
   { url: "https://images.unsplash.com/photo-1598284653127-24eb19dd82db?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Elegant corporate event with botanical floral arrangements", category: "Events" },
 ];
 

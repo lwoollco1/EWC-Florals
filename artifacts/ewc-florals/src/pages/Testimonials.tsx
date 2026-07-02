@@ -1,4 +1,3 @@
-cat > artifacts/ewc-florals/src/pages/Testimonials.tsx << 'EOF'
 import { motion } from "framer-motion";
 import { useDocumentTitle } from "@/hooks/use-document-title";
 import { Layout } from "@/components/layout/Layout";
@@ -117,4 +116,3 @@ export default function Testimonials() {
     </Layout>
   );
 }
-EOF

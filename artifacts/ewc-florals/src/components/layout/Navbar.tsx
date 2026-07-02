@@ -32,20 +32,24 @@ export function Navbar() {
     setMobileMenuOpen(false);
   }, [location]);
 
+  // Only show the transparent/white "hero" navbar style on the homepage itself,
+  // before scrolling. Every other page always uses the solid, readable style.
+  const isTransparentHero = location === "/" && !scrolled;
+
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b border-transparent",
-        scrolled 
-          ? "bg-background/90 backdrop-blur-md border-border py-3 shadow-sm" 
-          : "bg-transparent py-6"
+        isTransparentHero
+          ? "bg-transparent py-6"
+          : "bg-background/90 backdrop-blur-md border-border py-3 shadow-sm"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
           <span className={cn(
             "font-serif text-2xl md:text-4xl font-semibold tracking-wide transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]",
-            scrolled ? "text-foreground group-hover:text-primary" : "text-white group-hover:text-white/80"
+            isTransparentHero ? "text-white group-hover:text-white/80" : "text-foreground group-hover:text-primary"
           )}>
             EWC Florals
           </span>
@@ -61,7 +65,7 @@ export function Navbar() {
                 "text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary relative drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)]",
                 location === link.path
                   ? "text-primary"
-                  : scrolled ? "text-foreground/80" : "text-white"
+                  : isTransparentHero ? "text-white" : "text-foreground/80"
               )}
             >
               {link.name}
@@ -81,7 +85,7 @@ export function Navbar() {
         <button
           className={cn(
             "md:hidden transition-colors p-2 drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)]",
-            scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-white/80"
+            isTransparentHero ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"
           )}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"

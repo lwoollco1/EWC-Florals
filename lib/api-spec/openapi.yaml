@@ -1,0 +1,164 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: EWC Florals API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: inquiries
+    description: Contact/inquiry form submissions
+  - name: testimonials
+    description: Client testimonials
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /inquiries:
+    post:
+      operationId: submitInquiry
+      tags: [inquiries]
+      summary: Submit a contact/inquiry form
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InquiryInput"
+      responses:
+        "201":
+          description: Inquiry submitted successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Inquiry"
+        "400":
+          description: Validation error
+
+  /testimonials:
+    get:
+      operationId: listTestimonials
+      tags: [testimonials]
+      summary: List all testimonials
+      responses:
+        "200":
+          description: List of testimonials
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Testimonial"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+
+    InquiryInput:
+      type: object
+      required:
+        - name
+        - email
+        - eventType
+        - message
+      properties:
+        name:
+          type: string
+          minLength: 1
+        email:
+          type: string
+          format: email
+        phone:
+          type: ["string", "null"]
+        eventType:
+          type: string
+          enum: [wedding, baby_shower, birthday, corporate, other]
+        eventDate:
+          type: ["string", "null"]
+        guestCount:
+          type: ["string", "null"]
+        budgetRange:
+          type: ["string", "null"]
+        venue:
+          type: ["string", "null"]
+        message:
+          type: string
+          minLength: 1
+
+    Inquiry:
+      type: object
+      required:
+        - id
+        - name
+        - email
+        - eventType
+        - message
+        - createdAt
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+        phone:
+          type: ["string", "null"]
+        eventType:
+          type: string
+        eventDate:
+          type: ["string", "null"]
+        guestCount:
+          type: ["string", "null"]
+        budgetRange:
+          type: ["string", "null"]
+        venue:
+          type: ["string", "null"]
+        message:
+          type: string
+        createdAt:
+          type: string
+
+    Testimonial:
+      type: object
+      required:
+        - id
+        - clientName
+        - eventType
+        - review
+        - rating
+      properties:
+        id:
+          type: integer
+        clientName:
+          type: string
+        eventType:
+          type: string
+        review:
+          type: string
+        rating:
+          type: integer
+        imageUrl:
+          type: ["string", "null"]
+        location:
+          type: ["string", "null"]

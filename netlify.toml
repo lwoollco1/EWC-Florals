@@ -1,0 +1,12 @@
+[build]
+  command = "pnpm install --frozen-lockfile && pnpm --filter @workspace/ewc-florals run build"
+  publish = "artifacts/ewc-florals/dist/public"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+# Client-side routing (wouter) - let the app handle all routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

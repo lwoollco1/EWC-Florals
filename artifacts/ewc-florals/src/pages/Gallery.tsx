@@ -11,17 +11,17 @@ const images = [
   { url: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=800", alt: "Wedding reception table with lush floral centerpieces", category: "Weddings" },
   { url: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=800", alt: "Elegant bridal bouquet of white and blush roses", category: "Weddings" },
   { url: "https://images.unsplash.com/photo-1529636798458-92182e662485?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2VkZGluZyUyMGZsb3dlcnN8ZW58MHx8MHx8fDA%3D", alt: "Stunning floral arch at a wedding ceremony", category: "Weddings" },
-  { url: "https://unsplash.com/photos/a-table-is-set-with-candles-and-flowers-pt34cohzJiU", alt: "Romantic flower-lined wedding ceremony aisle", category: "Weddings" },
+  { url: "https://plus.unsplash.com/premium_photo-1673897888993-a1db844c2ca1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Romantic flower-lined wedding ceremony aisle", category: "Weddings" },
   { url: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&q=80&w=800", alt: "Wedding ceremony floral arrangements in an outdoor venue", category: "Weddings" },
   { url: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&q=80&w=800", alt: "Close-up of a lush bridal bouquet with garden roses", category: "Weddings" },
   // Baby Showers
-  { url: "https://unsplash.com/photos/a-table-topped-with-a-cake-and-a-vase-filled-with-flowers-XYTGH8TqunE", alt: "Beautiful baby shower floral arrangement", category: "Baby Showers" },
-  { url: "https://www.istockphoto.com/photo/baby-shower-gm512569076-87218301?utm_source=unsplash&utm_medium=affiliate&utm_campaign=srp_photos_bottom&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbaby-shower-flowers&utm_term=baby+shower+flowers%3A%3A%3A%3A68aec62a-f36f-49d1-87e0-06b669632bce", alt: "Soft pastel floral centerpiece for a baby shower", category: "Baby Showers" },
-  { url: "https://www.istockphoto.com/photo/birthday-party-gm1350497216-426579827", alt: "Delicate pink and white floral display for baby shower", category: "Baby Showers" },
+  { url: "https://images.unsplash.com/photo-1739488079226-30a108414302?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Beautiful baby shower floral arrangement", category: "Baby Showers" },
+  { url: "https://media.istockphoto.com/id/512569076/photo/baby-shower.jpg?s=2048x2048&w=is&k=20&c=m6ZHCeIDQghkd1UvbXqLFj0ZtikHp9NUGiaamT_7jcM=", alt: "Soft pastel floral centerpiece for a baby shower", category: "Baby Showers" },
+  { url: "https://media.istockphoto.com/id/1350497216/photo/birthday-party.jpg?s=2048x2048&w=is&k=20&c=_picDmWdOUlAA2ta2MFiSVsZswgVuNiBYSXzOCcXhHw=", alt: "Delicate pink and white floral display for baby shower", category: "Baby Showers" },
   // Events
   { url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800", alt: "Intimate candlelit dinner party with floral centerpieces", category: "Events" },
-  { url: "https://www.istockphoto.com/photo/serving-setting-table-festive-dinner-table-is-served-dishes-and-cutlery-and-gm1939425194-556496197", alt: "Birthday party floral installation and decor", category: "Events" },
-  { url: "https://unsplash.com/photos/red-and-green-flower-bouquet-on-table-t76TZgu1FVM", alt: "Elegant corporate event with botanical floral arrangements", category: "Events" },
+  { url: "https://media.istockphoto.com/id/1939425194/photo/serving-setting-table-festive-dinner-table-is-served-dishes-and-cutlery-and-decorated-with.jpg?s=2048x2048&w=is&k=20&c=lt7Ls4ZZoaWQ-4UDbXoAIpl9Y6OkRbxtNK_EK5L9Mmo=", alt: "Birthday party floral installation and decor", category: "Events" },
+  { url: "https://images.unsplash.com/photo-1598284653127-24eb19dd82db?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Elegant corporate event with botanical floral arrangements", category: "Events" },
 ];
 
 export default function Gallery() {

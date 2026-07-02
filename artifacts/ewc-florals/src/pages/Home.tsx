@@ -14,7 +14,7 @@ export default function Home() {
       <section className="relative h-[90vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=2000')" }}
+          style={{ backgroundImage: "url('https://drive.google.com/file/d/1yfULAic6FOaGVkcMdrDYlbqSwkWLMRY4/view?usp=sharing')" }}
         >
           <div className="absolute inset-0 bg-black/20" />
         </div>

@@ -14,7 +14,7 @@ export default function Home() {
       <section className="relative h-[90vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://drive.google.com/file/d/1yfULAic6FOaGVkcMdrDYlbqSwkWLMRY4/view?usp=sharing')" }}
+          style={{ backgroundImage: "url('/images/hero.jpg')" }}
         >
           <div className="absolute inset-0 bg-black/20" />
         </div>

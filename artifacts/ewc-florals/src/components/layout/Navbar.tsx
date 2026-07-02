@@ -43,7 +43,10 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="font-serif text-2xl md:text-3xl font-medium tracking-wide text-foreground group-hover:text-primary transition-colors">
+          <span className={cn(
+            "font-serif text-2xl md:text-4xl font-semibold tracking-wide transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]",
+            scrolled ? "text-foreground group-hover:text-primary" : "text-white group-hover:text-white/80"
+          )}>
             EWC Florals
           </span>
         </Link>
@@ -55,8 +58,10 @@ export function Navbar() {
               key={link.path}
               href={link.path}
               className={cn(
-                "text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary relative",
-                location === link.path ? "text-primary" : "text-foreground/80"
+                "text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary relative drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)]",
+                location === link.path
+                  ? "text-primary"
+                  : scrolled ? "text-foreground/80" : "text-white"
               )}
             >
               {link.name}
@@ -74,7 +79,10 @@ export function Navbar() {
 
         {/* Mobile Nav Toggle */}
         <button
-          className="md:hidden text-foreground hover:text-primary transition-colors p-2"
+          className={cn(
+            "md:hidden transition-colors p-2 drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)]",
+            scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-white/80"
+          )}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
           data-testid="button-mobile-menu"

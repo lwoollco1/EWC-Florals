@@ -10,7 +10,7 @@ const images = [
   // Weddings
   { url: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=800", alt: "Wedding reception table with lush floral centerpieces", category: "Weddings" },
   { url: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=800", alt: "Elegant bridal bouquet of white and blush roses", category: "Weddings" },
-  { url: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=800", alt: "Stunning floral arch at a wedding ceremony", category: "Weddings" },
+  { url: "https://images.unsplash.com/photo-1529636798458-92182e662485?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2VkZGluZyUyMGZsb3dlcnN8ZW58MHx8MHx8fDA%3D", alt: "Stunning floral arch at a wedding ceremony", category: "Weddings" },
   { url: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800", alt: "Romantic flower-lined wedding ceremony aisle", category: "Weddings" },
   { url: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&q=80&w=800", alt: "Wedding ceremony floral arrangements in an outdoor venue", category: "Weddings" },
   { url: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&q=80&w=800", alt: "Close-up of a lush bridal bouquet with garden roses", category: "Weddings" },

@@ -16,8 +16,8 @@ const images = [
   { url: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&q=80&w=800", alt: "Close-up of a lush bridal bouquet with garden roses", category: "Weddings" },
   // Baby Showers
   { url: "https://images.unsplash.com/photo-1739488079226-30a108414302?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Beautiful baby shower floral arrangement", category: "Baby Showers" },
-  { url: "https://media.istockphoto.com/id/512569076/photo/baby-shower.jpg?s=2048x2048&w=is&k=20&c=m6ZHCeIDQghkd1UvbXqLFj0ZtikHp9NUGiaamT_7jcM=", alt: "Soft pastel floral centerpiece for a baby shower", category: "Baby Showers" },
-  { url: "https://media.istockphoto.com/id/1350497216/photo/birthday-party.jpg?s=2048x2048&w=is&k=20&c=_picDmWdOUlAA2ta2MFiSVsZswgVuNiBYSXzOCcXhHw=", alt: "Delicate pink and white floral display for baby shower", category: "Baby Showers" },
+  { url: "https://plus.unsplash.com/premium_photo-1680172800367-9d9437174856?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjV8fGJhYnklMjBzaG93ZXIlMjBmbG93ZXJzfGVufDB8fDB8fHww", alt: "Soft pastel floral centerpiece for a baby shower", category: "Baby Showers" },
+  { url: "https://images.unsplash.com/photo-1766311890594-3cece21ac4b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmFieSUyMHNob3dlciUyMGZsb3dlcnN8ZW58MHx8MHx8fDA%3D", alt: "Delicate pink and white floral display for baby shower", category: "Baby Showers" },
   // Events
   { url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800", alt: "Intimate candlelit dinner party with floral centerpieces", category: "Events" },
   { url: "https://media.istockphoto.com/id/1939425194/photo/serving-setting-table-festive-dinner-table-is-served-dishes-and-cutlery-and-decorated-with.jpg?s=2048x2048&w=is&k=20&c=lt7Ls4ZZoaWQ-4UDbXoAIpl9Y6OkRbxtNK_EK5L9Mmo=", alt: "Birthday party floral installation and decor", category: "Events" },

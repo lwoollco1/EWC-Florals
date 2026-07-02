@@ -5,21 +5,31 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
+const portfolioPhotos = [
+  "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&q=80&w=600",
+  "https://images.unsplash.com/photo-1487070183336-b863922373d4?auto=format&fit=crop&q=80&w=600",
+  "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80&w=600",
+  "https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?auto=format&fit=crop&q=80&w=600",
+  "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=600",
+  "https://images.unsplash.com/photo-1509927083803-4bd519298ac4?auto=format&fit=crop&q=80&w=600",
+];
+
 export default function Home() {
   useDocumentTitle("EWC Florals | Central Florida Wedding Florist", "Dreamlike floral arrangements for weddings, baby showers, birthday parties, and corporate events in Central Florida.");
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative h-[90vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
-        <div 
+      <section className="relative h-[90vh] md:h-screen w-full flex items-end justify-center overflow-hidden">
+        <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/logo.jpg')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&q=80&w=2000')" }}
         >
-          <div className="absolute inset-0 bg-black/20" />
+          {/* Gradient only at the bottom third, so the photo stays visible up top */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
         </div>
-        
-        <div className="container relative z-10 mx-auto px-4 text-center mt-20">
+
+        <div className="container relative z-10 mx-auto px-4 text-center pb-20 md:pb-28">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -49,10 +59,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Intro Section */}
-      <section className="py-24 bg-background">
+      {/* Portfolio Strip - quick visual proof right after the hero */}
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4">
+            {portfolioPhotos.map((src, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="aspect-square overflow-hidden"
+              >
+                <img
+                  src={src}
+                  alt="Floral arrangement by EWC Florals"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/gallery" className="inline-flex items-center text-primary hover:text-foreground transition-colors font-sans tracking-wide uppercase text-sm group">
+              See Full Gallery <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro Section */}
+      <section className="py-24 bg-card">
+        <div className="container mx-auto px-4">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -68,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-24 bg-card">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-serif mb-4">Our Services</h2>
@@ -95,7 +134,7 @@ export default function Home() {
                 img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800"
               }
             ].map((s, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
